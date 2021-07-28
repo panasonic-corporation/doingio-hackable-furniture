@@ -1,4 +1,4 @@
-## 【D+IO Product #8】Hackable Furnitureの作り方<br>
+## 【D+IO Product #6】Hackable Furnitureの作り方<br>
 ### 〜 家具に機能をアドオンする D+IO Product 〜
 
 <hr>
