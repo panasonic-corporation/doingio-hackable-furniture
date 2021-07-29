@@ -1,10 +1,10 @@
-## 【D+IO Product #8】Hackable Furnitureの作り方<br>
+## 【D+IO Product #6】Hackable Furnitureの作り方<br>
 ### 〜 家具に機能をアドオンする D+IO Product 〜
 
 <hr>
 
 **ソースコードはこちらです**
-<br>[https://github.com/panasonic-corporation/doingio-hackable-furniture/HackableFurniture](https://github.com/panasonic-corporation/doingio-hackable-furniture/HackableFurniture)
+<br>[https://github.com/panasonic-corporation/doingio-hackable-furniture/blob/master/HackableFurniture/HackableFurniture.ino](https://github.com/panasonic-corporation/doingio-hackable-furniture/blob/master/HackableFurniture/HackableFurniture.ino)
 
 <hr>
 
@@ -13,13 +13,14 @@
 
 ### プロダクト概要
 
-家具に機能をアドオンするD+IO Product「Hackable Furniture」の作り方を紹介します。
+家具に機能をアドオンするD+IO Product「Hackable Furniture」。
 
-最近では便利な家電やその周辺機器、ガジェットなどが簡単に手に入るようになりました。
+最近ではWi-Fiルーターやスマートスピーカーなど便利なガジェットや周辺機器を生活空間に導入する人が増えています。
 
-しかし、その代償として家の中がそのようなモノで散らかってしまってはいないでしょうか。
+そのようなもののおかげで便利な暮らしになっている一方、部屋がモノで散らかって見えてしまうのも事実のようです。
 
-もし、スツールやソファなど生活に必要不可欠な家具に、便利な機能を持った家電やガジェットなどが埋め込まれていたら、部屋の中が少しはスッキリすると思いませんか？
+もし、テーブルやソファなど生活に必要不可欠な家具に、便利な機能を持った家電やガジェットなどが埋め込まれていたら、部屋の中が少しはスッキリすると思いませんか？
+
 
 Hackable Furnitureは、家具にガジェットを組み込むことで様々な機能を家具に付与することができるデバイスです。
 
@@ -27,7 +28,8 @@ Hackable Furnitureは、家具にガジェットを組み込むことで様々�
 
 今回は天板をノックするときのパターンで家電を制御できるスマートスツールの作り方を紹介します。
 
-スツールは今お使いのスツールを使用することもできますし、[EMARF](https://emarf.co/)という木材加工サービスを使用することでD+IO専用のスツールを特注することもできます。
+スツールは今お使いのスツールを使用することもできますし、木材加工サービス[EMARF](https://emarf.co)を使用することでD+IO専用のスツールを特注することもできます。
+
 D+IO専用スツールは様々なM5Stack製ガジェットを接続できるように設計されており、ユースケースに合わせて機能をカスタマイズすることで目的にあったスマートなスツールを製作することができます。 （別途3Dプリンターで出力したパーツが必要です。）
 
 
@@ -67,7 +69,7 @@ D+IO専用スツールは様々なM5Stack製ガジェットを接続できるよ
 |     | 部品名     | 個数 |  販売リンク（例）  | 備考 |
 |:----:|:---------|:----|:------------------------|:----|
 |  1  | 木材パーツ | 1 |  | D+IO専用スツールを製作する場合必要。注文方法は後述。 |
-|  2  | 3Dプリントパーツ | 1 |  | D+IO専用スツールを製作する場合必要。データは[こちら](data/dio_table_parts.step) |
+|  2  | 3Dプリントパーツ | 1 |  | D+IO専用スツールを製作する場合必要。 |
 |  3  | レゴ テクニック ピン | 4 | [Amazon](https://www.amazon.co.jp/dp/B07KDW6T5F) | D+IO専用スツールを製作する場合必要。|
 |  4  | M5StickC用マウンタ | 1 | [スイッチサイエンス](https://www.switch-science.com/catalog/5517/) | D+IO専用スツールを製作する場合必要。M5StickCを購入するとついてくるレゴ互換マウンタを使用します。|
 
@@ -82,13 +84,13 @@ D+IO専用スツールは様々なM5Stack製ガジェットを接続できるよ
 
 1. ファームウェアをダウンロードしてください。
 
-    https://github.com/panasonic-corporation/doingio-hackable-furniture/
+    このページ上部の「Code」ボタンからダウンロードできます
 
     <img src="images/firmware_download.png" width="500px" />
 
 1. プロジェクトを開いてください。
 
-    ダウンロードしたフォルダを開き、doingio-hackable-furniture/HackableFurniture/HackableFurniture.ino をダブルクリックしてArduino IDEで開きます。
+    ダウンロードしたフォルダを開き、doingio-hackable-furniture/HackableFurniture/HackableFurniture.ino をダブルクリックしてArduino IDEでファイルを開きます。
 
 
 ### 4 ライブラリのダウンロードとインストール
@@ -144,7 +146,7 @@ D+IO専用スツールは様々なM5Stack製ガジェットを接続できるよ
 
 1. [EMARF](https://emarf.co/)にアクセスしてください。
 
-1. [dio_stool.dxf](data/dio_stool.dxf)のファイルをアップロードしてください。
+1. doingio-hackable-furniture/data/dio_stool.dxfのファイルをアップロードしてください。
 
     <img src="images/emarf_dxf_choose.jpeg" width="500px" />
 
@@ -167,7 +169,7 @@ D+IO専用スツールは様々なM5Stack製ガジェットを接続できるよ
 
 ### 9 D+IO専用スツールの組み立て方（お手持ちのテーブルなどに取り付ける場合はスキップ）
 
-1. [dio_stool_parts.step](data/dio_stool_parts.step)のファイルを3Dプリンターで出力してください。
+1. doingio-hackable-furniture/data/dio_stool_parts.stepのファイルを3Dプリンターで出力してください。
 
     <img src="images/stool_parts.png" width="500px" />
 
